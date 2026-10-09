@@ -1,6 +1,8 @@
 services:
   pangolin_frontend:
-    build: .
+    build:
+      context: https://github.com/t1297131-design/homesite.git#main
+      dockerfile: Dockerfile
     container_name: pangolin_frontend
     restart: unless-stopped
     expose:
