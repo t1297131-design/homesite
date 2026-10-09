@@ -1,0 +1,14 @@
+services:
+  pangolin_frontend:
+    build: .
+    container_name: pangolin_frontend
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - pangolin_frontend
+
+networks:
+  pangolin_frontend:
+    external: true
+    name: pangolin_frontend
